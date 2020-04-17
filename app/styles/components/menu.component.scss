@@ -35,7 +35,7 @@
   height: calc(100vh - #{$app-topbar-height});
   overflow-y: auto;
   user-select: none;
-  background: rgba($color-menu-bg, 0.08);
+  background: linear-gradient($color-secondary, $color-primary);
   // box-shadow: -1px 0 0 rgba($color-fonts, 0.08) inset;
 
   @include viewports(up-to small) {
@@ -49,6 +49,7 @@
 
   &.open {
     @include viewports(up-to small) {
+      background: linear-gradient($color-primary, $color-secondary);
       transform: translate3d(0, 0, 0);
     }
   }
@@ -75,8 +76,9 @@
 
     @include viewports(up-to small) {
       display: block;
-      width: 60%;
-      margin: 0 auto;
+      width: auto;
+      margin: 2rem auto;
+      height: auto;
     }
   }
 
